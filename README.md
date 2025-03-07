@@ -1,62 +1,102 @@
-**Week 3: React.js Fundamentals Assignment**
+# React + Tailwind CSS Project
 
-**Objective:**
+## 📌 Project Setup
 
-- Apply React.js concepts learned throughout the week.
-- Practice creating components, managing state, handling events, and using Tailwind CSS.
+### 1️⃣ Prerequisites
+Ensure you have the following installed:
+- **Node.js** (v20+ recommended)
+- **npm** (v9+ recommended)
+- **VS Code** (or any preferred code editor)
 
-**Instructions:**
+### 2️⃣ Install Node.js & npm (if not installed)
+To install using **Node Version Manager (NVM)**:
+```sh
+nvm install 20
+nvm use 20
+```
+Check versions:
+```sh
+node -v
+npm -v
+```
 
-1. **Setup React.js Project:**
+### 3️⃣ Clone the Repository
+```sh
+git clone https://github.com/YOUR_GITHUB_USERNAME/react-assignment.git
+cd react-assignment
+```
 
-   - Install Node.js using NVM and create a React project.
-   - Create a new project folder called `react-assignment`.
-   - Initialize a React app and configure Tailwind CSS.
-   - Ensure the project is properly structured with organized components.
+### 4️⃣ Install Dependencies
+```sh
+npm install
+```
 
-2. **Project Structure:**
+## 🖌️ Tailwind CSS Setup
+If Tailwind is not already initialized, run:
+```sh
+npx tailwindcss init -p
+```
+Ensure `tailwind.config.js` has the correct content:
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+Update `index.css` to include Tailwind:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-   - Organize your project files with a clear folder structure, ensuring separation of concerns.
+## 🚀 Running the Project
+To start the development server:
+```sh
+npm run dev
+```
+The app will be available at: `http://localhost:5173/`
 
-3. **Create Functional Components:**
+## 📂 Project Structure
+```
+react-assignment/
+│-- src/
+│   │-- components/
+│   │   │-- Header.jsx
+│   │   │-- Profile.jsx
+│   │   │-- Counter.jsx
+│   │-- App.jsx
+│   │-- main.jsx
+│-- public/
+│-- package.json
+│-- tailwind.config.js
+│-- README.md
+```
 
-   - Build a `Header` component that displays a title.
-   - Create a `Profile` component that accepts user details (name, email) as props and displays them.
-   - Implement a `Counter` component that tracks and displays count using state.
+## 🛠️ Features
+- Functional React components (`Header`, `Profile`, `Counter`)
+- State management using `useState`
+- Styled with **Tailwind CSS**
+- Responsive UI
 
-4. **Manage State with Hooks:**
+## 📝 How to Use
+1. Click the **Counter** button to increase the count.
+2. View user details in the **Profile** component.
+3. Modify the **Header** text in `Header.jsx`.
 
-   - Use React's `useState` hook to manage and update component state.
-   - Add event handlers to interact with the state (e.g., increment counter, update profile info).
+## 📤 Deployment
+To build the project for production:
+```sh
+npm run build
+```
 
-5. **Integrate Components in `App.js`:**
+## 📝 Contribution
+Feel free to fork the repository and create a pull request!
 
-   - Import and render all the created components within `App.js`.
-   - Pass necessary props and ensure proper communication between components.
-
-6. **Styling with Tailwind CSS:**
-
-   - Apply Tailwind utility classes to style the components.
-   - Ensure the UI is visually appealing and responsive.
-
-7. **Testing:**
-
-   - Run the project to verify all components are working as expected.
-   - Ensure there are no console errors or warnings.
-
-8. **Documentation:**
-
-   - Add a `README.md` file with clear instructions on how to install, run, and use the project.
-
-9. **Submission:**
-
-   - Push your code to your GitHub repository.
-
-**Evaluation Criteria:**
-
-- Correct implementation of React components and hooks.
-- Proper use of Tailwind CSS for styling.
-- Project structure and code organization.
-- Clear and concise documentation.
-- Successful testing of the components.
+## 📜 License
+MIT License © 2025 Bridget Masila.
 
