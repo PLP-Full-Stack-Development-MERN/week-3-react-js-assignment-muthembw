@@ -1,17 +1,23 @@
-import { useState } from 'react';
-import Header from './components/Header';
-import Profile from './components/Profile';
+import React from 'react';
+import Header from './components/Header';  
 import Counter from './components/Counter';
-import './App.css';
+import Profile from './components/Profile';
+import "/src/all-css/Counter.css";  // ✅ Correct CSS path
+import "/src/all-css/Header.css";   // ✅ Correct CSS path
+import "/src/all-css/Profile.css";  // ✅ Correct CSS path
 
-function App() {
+const App = () => {
   return (
-    <div className="text-center">
-      <Header title="My React App" />
-      <Profile name="John Doe" email="john@example.com" />
+    <div>
+      <Header />
       <Counter />
+      <div className="player-details">
+        <Profile name="Bridget Masila" email="masilabridget6@gmail.com" />
+        <Profile name="Max Wairimu" email="wairimumax@gmail.com" />
+        <Profile name="Joel Joe" email="joejoe@gmail.com" />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,10 +1,10 @@
-const Header = ({ title }) => {
-    return (
-      <header className="bg-blue-500 text-white p-4 text-center text-xl font-bold">
-        {title}
-      </header>
-    );
-  };
-  
-  export default Header;
-  
+import React from 'react';
+
+function Header(){
+  return(
+    <header className="bg-blue-grey text-blue -300 p-4">
+      <h2>Chess Timer</h2>
+    </header>
+  );
+}
+export default Header;
